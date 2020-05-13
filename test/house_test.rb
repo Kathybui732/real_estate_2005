@@ -35,7 +35,7 @@ class HouseTest < Minitest::Test
   end
 
   def test_it_is_only_above_market_price_if_over_500000
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
     house_2 = House.new("$500000", "234 sugar lane")
     refute house.above_market_average?
@@ -83,7 +83,10 @@ class HouseTest < Minitest::Test
     house.add_room(room_2)
     house.add_room(room_3)
     house.add_room(room_4)
-    expected = {"price => 400000", "address" => "123 sugar lane"}
+    expected = {
+      "price" => 400000,
+      "address" => "123 sugar lane"
+    }
     assert_equal expected, house.details
   end
 end
