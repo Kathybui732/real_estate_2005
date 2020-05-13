@@ -59,7 +59,7 @@ class HouseTest < Minitest::Test
   end
 
   def test_it_can_calculate_total_house_area
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
     room_1 = Room.new(:bedroom, 10, '13')
     room_2 = Room.new(:bedroom, 11, '15')
@@ -73,7 +73,7 @@ class HouseTest < Minitest::Test
   end
 
   def test_it_can_give_house_details
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
     room_1 = Room.new(:bedroom, 10, '13')
     room_2 = Room.new(:bedroom, 11, '15')
