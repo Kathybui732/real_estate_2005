@@ -91,6 +91,7 @@ class HouseTest < Minitest::Test
   end
 
   def test_price_per_square_foot
+    # skip
     house = House.new("$400000", "123 sugar lane")
     room_1 = Room.new(:bedroom, 10, '13')
     room_2 = Room.new(:bedroom, 11, '15')
@@ -104,6 +105,7 @@ class HouseTest < Minitest::Test
   end
 
   def test_it_can_sort_rooms_by_area
+    # skip
     house = House.new("$400000", "123 sugar lane")
     room_1 = Room.new(:bedroom, 10, '13')
     room_2 = Room.new(:bedroom, 11, '15')
@@ -118,6 +120,7 @@ class HouseTest < Minitest::Test
   end
 
   def test_it_can_sort_rooms_by_category
+    # skip
     house = House.new("$400000", "123 sugar lane")
     room_1 = Room.new(:bedroom, 10, '13')
     room_2 = Room.new(:bedroom, 11, '15')
