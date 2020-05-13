@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require "pride"
+require "minitest/pride"
 require "./lib/house"
 require "./lib/room"
 
