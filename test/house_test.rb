@@ -43,7 +43,7 @@ class HouseTest < Minitest::Test
   end
 
   def test_it_can_sort_room_by_category
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
     room_1 = Room.new(:bedroom, 10, '13')
     room_2 = Room.new(:bedroom, 11, '15')
@@ -53,9 +53,9 @@ class HouseTest < Minitest::Test
     house.add_room(room_2)
     house.add_room(room_3)
     house.add_room(room_4)
-    assert_equal [], house.rooms_from_category(:bedroom)
-    assert_equal [], house.rooms_from_category(:basement)
-    assert_equal [], house.rooms_from_category(:living_room)
+    assert_equal [room_1, room_2], house.rooms_from_category(:bedroom)
+    assert_equal [room_4], house.rooms_from_category(:basement)
+    assert_equal [room_3], house.rooms_from_category(:living_room)
   end
 
   def test_it_can_calculate_total_house_area
