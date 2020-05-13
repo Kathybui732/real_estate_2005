@@ -16,8 +16,14 @@ class House
   end
 
   def rooms_from_category(room_cat)
-    @rooms.sort_by do |room|
+    @rooms.select do |room|
       room.category == room_cat
+    end
+  end
+
+  def area
+    @rooms.reduce(0) do |area, room|
+      area + room.area
     end
   end
 end
