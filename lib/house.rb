@@ -26,4 +26,11 @@ class House
       area + room.area
     end
   end
+
+  def details
+    details = {
+      "price" => @price.delete("$").to_i,
+      "address" => @address
+    }
+  end
 end
