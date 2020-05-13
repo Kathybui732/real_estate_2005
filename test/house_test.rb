@@ -17,7 +17,7 @@ class HouseTest < Minitest::Test
 
   def test_it_has_an_address
     house = House.new("$400000", "123 sugar lane")
-    assert_equal "123 sugar lane", house.price
+    assert_equal "123 sugar lane", house.address
   end
 
   def test_it_has_empty_rooms_array
