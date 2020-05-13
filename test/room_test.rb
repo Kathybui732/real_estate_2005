@@ -23,13 +23,13 @@ class RoomTest < Minitest::Test
   end
 
   def test_is_it_painted
-    skip
+    # skip
     room = Room.new(:bedroom, 10, '13')
     refute room.is_painted?
   end
 
   def test_it_can_be_painted
-    skip
+    # skip
     room = Room.new(:bedroom, 10, '13')
     room.paint
     assert room.is_painted?
